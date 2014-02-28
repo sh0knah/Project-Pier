@@ -132,6 +132,9 @@
         return; // nothing here...
       } // if
       
+      if ($task->getCreatedById() == 0)
+        return true;
+
       tpl_assign('task', $task);
 
       $recipients = array();
